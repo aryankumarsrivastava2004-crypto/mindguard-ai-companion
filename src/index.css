@@ -78,19 +78,19 @@
     box-shadow: var(--glow-green);
   }
   .text-glow-blue {
-    text-shadow: 0 0 20px hsl(32 80% 50% / 0.5);
+    text-shadow: 0 0 12px hsl(168 65% 38% / 0.3);
   }
   .text-glow-purple {
-    text-shadow: 0 0 20px hsl(16 70% 45% / 0.5);
+    text-shadow: 0 0 12px hsl(220 70% 55% / 0.3);
   }
   .border-glow-blue {
-    border-color: hsl(32 80% 50% / 0.3);
-    box-shadow: 0 0 15px hsl(32 80% 50% / 0.1), inset 0 0 15px hsl(32 80% 50% / 0.05);
+    border-color: hsl(168 65% 38% / 0.25);
+    box-shadow: 0 4px 14px hsl(168 65% 38% / 0.1);
   }
   .bg-grid {
     background-image: 
-      linear-gradient(hsl(32 80% 50% / 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(32 80% 50% / 0.03) 1px, transparent 1px);
+      linear-gradient(hsl(168 65% 38% / 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(168 65% 38% / 0.04) 1px, transparent 1px);
     background-size: 60px 60px;
   }
 }
