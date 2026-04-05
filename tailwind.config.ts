@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["DM Sans", "system-ui", "sans-serif"],
-        mono: ["DM Mono", "monospace"],
+        sans: ["Plus Jakarta Sans", "system-ui", "sans-serif"],
+        mono: ["IBM Plex Mono", "monospace"],
       },
       colors: {
         neon: {
