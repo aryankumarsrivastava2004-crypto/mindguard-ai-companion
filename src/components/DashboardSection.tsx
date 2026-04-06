@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Activity, Moon, MessageSquare, Keyboard, Shield, Zap, Music, BellOff, Monitor } from "lucide-react";
+import { Activity, Moon, MessageSquare, Keyboard, Shield, Zap, Music, BellOff, Monitor, Heart, Wind, Footprints, Brain, Smile, TreePine } from "lucide-react";
 
 const DashboardSection = () => {
   const [stressed, setStressed] = useState(false);
@@ -107,6 +107,34 @@ const DashboardSection = () => {
                     <div key={a.text} className="flex items-start gap-3 rounded-lg bg-card/50 p-3 border border-border">
                       <a.icon className="w-4 h-4 text-primary mt-0.5 shrink-0" />
                       <span className="text-sm text-foreground">{a.text}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Wellness Suggestions — shown when score > 50% */}
+            {stressed && (
+              <div className="animate-pop-in rounded-xl border border-accent/30 bg-accent/5 p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <Heart className="w-5 h-5 text-accent" />
+                  <span className="font-semibold text-accent">Suggested Wellness Activities</span>
+                </div>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {[
+                    { icon: Wind, title: "Box Breathing", desc: "4s inhale → 4s hold → 4s exhale → 4s hold. Repeat 4 cycles." },
+                    { icon: Footprints, title: "5-Min Walk", desc: "A short walk outside can reduce cortisol by up to 25%." },
+                    { icon: Brain, title: "Body Scan", desc: "Progressive muscle relaxation from toes to head, 3 minutes." },
+                    { icon: Smile, title: "Gratitude Pause", desc: "Write down 3 things you're grateful for right now." },
+                    { icon: TreePine, title: "Nature Break", desc: "Step outside and focus on natural sounds for 2 minutes." },
+                    { icon: Activity, title: "Desk Stretches", desc: "Neck rolls, shoulder shrugs, and wrist circles for relief." },
+                  ].map((s) => (
+                    <div key={s.title} className="flex items-start gap-3 rounded-lg bg-card/50 p-4 border border-border hover:border-accent/40 transition-colors">
+                      <s.icon className="w-5 h-5 text-accent mt-0.5 shrink-0" />
+                      <div>
+                        <p className="text-sm font-semibold text-foreground">{s.title}</p>
+                        <p className="text-xs text-muted-foreground mt-1">{s.desc}</p>
+                      </div>
                     </div>
                   ))}
                 </div>
