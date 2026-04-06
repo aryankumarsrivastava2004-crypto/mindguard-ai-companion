@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Activity, Moon, MessageSquare, Keyboard, Shield, Zap, Music, BellOff, Monitor } from "lucide-react";
+import { Activity, Moon, MessageSquare, Keyboard, Shield, Zap, Music, BellOff, Monitor, Heart, Wind, Footprints, Brain, Smile, TreePine } from "lucide-react";
 
 const DashboardSection = () => {
   const [stressed, setStressed] = useState(false);
